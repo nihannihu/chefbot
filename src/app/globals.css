@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-kitchen-900: #0F0F0F;
+  --color-kitchen-800: #1F1F1F;
+  --color-kitchen-glass: rgba(255,107,53,0.12);
+
+  --color-saffron-400: #FB923C;
+  --color-saffron-500: #FF6B35;
+  --color-saffron-600: #EA580B;
+
+  --color-chili-500: #E63946;
+  --color-chili-600: #DC2626;
+
+  --color-turmeric-500: #F4A261;
+  --color-herb-500: #10B981;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #0F0F0F;
+  --foreground: #F3F4F6;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Custom Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-saffron {
+  background: rgba(255, 107, 53, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 107, 53, 0.2);
 }
